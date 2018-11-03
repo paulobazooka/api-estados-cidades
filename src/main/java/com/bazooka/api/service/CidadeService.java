@@ -5,6 +5,7 @@ import com.bazooka.api.repository.CidadeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -17,15 +18,7 @@ public class CidadeService {
         return this.cidadeRepository.save(cidade);
     }
 
-
-    public Cidade buscarCidade(Long id){
-        Optional<Cidade> cidade = Optional.ofNullable(this.cidadeRepository.findById(id).get());
-
-        if(cidade.isPresent()){
-            return cidade.get();
-        }else{
-            return new Cidade();
-        }
+    public Iterable<Cidade> listarCidadesPorEstado(Integer estado){
+        return cidadeRepository.findAllByEstado(estado);
     }
-
 }

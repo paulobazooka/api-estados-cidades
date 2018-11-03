@@ -29,7 +29,7 @@ public class EstadoService{
         return estadoRepository.save(estado);
     }
 
-
+/*
     public Estado buscarEstado(Long id){
         Optional<Estado> estado = Optional.ofNullable(estadoRepository.findById(id).get());
 
@@ -48,6 +48,6 @@ public class EstadoService{
         }else{
             return new ArrayList<Cidade>();
         }
-    }
+    }*/
 
 }

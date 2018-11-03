@@ -2,34 +2,29 @@ package com.bazooka.api.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotEmpty;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Estado extends AbstractEntity{
+public class Estado{
 
-    @Column(unique = true, nullable = false)
-    @NotEmpty(message = "Sigla obrigatória")
+    @Id
+    private Integer id;
     private String sigla;
-
-    @Column(unique = true, nullable = false)
-    @NotEmpty(message = "Nome obrigatória")
     private String nome;
-    @OneToMany
-    private List<Cidade> cidades = new ArrayList<>();
 
     public Estado() {
     }
 
-    public Estado(String nome) {
-        this.nome = nome;
+    public Integer getId() {
+        return id;
     }
 
-    public Estado(String sigla, String nome) {
-        this.sigla = sigla;
-        this.nome = nome;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getSigla() {
@@ -46,17 +41,5 @@ public class Estado extends AbstractEntity{
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public List<Cidade> getCidades() {
-        return cidades;
-    }
-
-    public void setCidades(List<Cidade> cidades) {
-        this.cidades = cidades;
-    }
-
-    public void adicionarCidade(Cidade cidade){
-        this.cidades.add(cidade);
     }
 }

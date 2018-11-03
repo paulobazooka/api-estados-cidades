@@ -21,14 +21,18 @@ public class Initialize implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        Estado acre = estadoService.salvarEstado(new Estado("AC", "Acre"));
-        Estado alagoas = estadoService.salvarEstado(new Estado("AL", "Alagoas"));
-        Estado amapa = estadoService.salvarEstado(new Estado("AP", "Amapá"));
-        Estado amazonas = estadoService.salvarEstado(new Estado("AM", "Amazonas"));
-        Estado bahia = estadoService.salvarEstado(new Estado("BA", "Bahia"));
-        Estado ceara = estadoService.salvarEstado(new Estado("CE", "Ceará"));
-        Estado distrito = estadoService.salvarEstado(new Estado("DF", "Distrito Federal"));
-        Estado espirito = estadoService.salvarEstado(new Estado("ES", "Espirito Santo"));
+      /*  Estado estado = new Estado();
+        estado.setId(70);
+        estado.setSigla("ZZ");
+        estado.setNome("Insominiac");
+        estadoService.salvarEstado(estado);
+
+
+        Cidade cidade = new Cidade();
+        cidade.setId(20000);
+        cidade.setNome("MZESLD");
+        cidade.setEstado(70);
+        cidadeService.salvarCidade(cidade);*/
 
     }
 }

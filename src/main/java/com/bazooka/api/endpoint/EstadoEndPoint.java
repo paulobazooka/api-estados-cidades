@@ -17,17 +17,7 @@ public class EstadoEndPoint {
     EstadoService estadoService;
 
     @GetMapping
-    public Iterable<Estado> getEstados(){
+    public Iterable<Estado> getEstados() {
         return estadoService.listarEstados();
-    }
-
-    @GetMapping("/{id}")
-    public Estado buscarEstado(@PathVariable Long id){
-        return estadoService.buscarEstado(id);
-    }
-
-    @GetMapping("/{id}/cidades")
-    public Iterable<Cidade> buscarCidadesPorEstado(@PathVariable Long id){
-        return estadoService.buscarCidadesPorEstado(id);
     }
 }
