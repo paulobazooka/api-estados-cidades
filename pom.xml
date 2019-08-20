@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.bazooka</groupId>
 	<artifactId>com.bazooka</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.0</version>
 	<name>com.bazooka</name>
 	<description>Api para retorno de estados e cidades brasileiras</description>
 
