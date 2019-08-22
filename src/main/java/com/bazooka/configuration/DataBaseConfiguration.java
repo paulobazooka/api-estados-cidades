@@ -9,11 +9,11 @@ import javax.sql.DataSource;
 @Configuration
 public class DataBaseConfiguration {
 
-    private static final String HOST = "ec2-54-225-68-133.compute-1.amazonaws.com";
-    private static final String DB = "d84fd1vlk2q43l";
+    private static final String HOST = "ec2-50-19-254-63.compute-1.amazonaws.com";
+    private static final String DB = "dahou9kpbb1qgl";
     private static final int PORT = 5432;
-    private static final String USERNAME = "wmrpovwighhlpk";
-    private static final String PASSWORD = "6dce6cec6512f4b6ff2dc2be045c473abd38c99ccaf4f616343144b7b84825c9";
+    private static final String USERNAME = "bbkfiwtxeukfkl";
+    private static final String PASSWORD = "e4a0bb2daee9352f70599fbccb3e7a32508399c3b87881c788a3210de7d8d36d";
 
 
     @Bean
