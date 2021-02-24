@@ -21,8 +21,9 @@ public class JobAutoGet {
     @Scheduled(cron = "${job.auto-get.cron}")
     public void run() {
         try {
+        log.info("job");
             //log.info("Job auto get");
-            URL url = new URL("https://estados-cidades.herokuapp.com");
+        /*    URL url = new URL("https://estados-cidades.herokuapp.com");
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
             BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream(), StandardCharsets.UTF_8));
@@ -36,7 +37,7 @@ public class JobAutoGet {
             in = new BufferedReader(new InputStreamReader(con.getInputStream(), StandardCharsets.UTF_8));
             response = "";
             for (String line; (line = in.readLine()) != null; response += line);
-            log.info("Job success!\n{}\n", response);
+            log.info("Job success!\n{}\n", response);*/
 
         } catch (MalformedURLException e) {
             log.error("ERROR URL mal formatada: {}", e.toString());
